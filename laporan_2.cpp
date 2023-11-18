@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
 	double a, b, result;
-	int x, y, choose, resultModulus;
+	int x, y, choose, resultModulus, resultOddEven;
 	
 	string input1 = "Masukkan Nilai 1: ";
 	string input2 = "Masukkan Nilai 2: ";
@@ -27,46 +27,115 @@ int main() {
 		
 		cout << "Masukkan Angka 1:" << endl;
 		cin >> a;
-		
 		cout << "Masukkan Angka 2:" << endl;
 		cin >> b;
 		
 		result = a + b;
-		cout << resultEnd << a << " + " << b << " = " << result << endl;
+		resultOddEven = result;
+		cout << resultEnd << a << " + " << b << " = " << resultOddEven << endl;
+		
+//		=========== ODD EVEN VALIDATION USING IF ELSE CONDITION ===========
+//		if (resultOddEven % 2 == 1) {
+//			cout << "Hasil adalah Bilangan Ganjil" << endl;
+//		} else {
+//			cout << "Hasil adalah Bilangan Genap" << endl;
+//		}
+
+//		=========== ODD EVEN VALIDATION USING SWITCH CASE ===========
+//		resultOddEven = resultOddEven % 2;
+//		switch (resultOddEven) {
+//			case 1:
+//				cout << "Hasil adalah Bilangan Ganjil" << endl;
+//				break;
+//			default:
+//				cout << "Hasil adalah Bilangan Genap" << endl;
+//		}
 	} else if (choose == 2) {
-		cout << endl << "Pengurangan:" << endl;
+		cout << endl << "Pengurangan:" << endl;		
 		
 		cout << "Masukkan Angka 1:" << endl;
 		cin >> a;
-		
 		cout << "Masukkan Angka 2:" << endl;
 		cin >> b;
 		
 		result = a - b;
-		cout << resultEnd << a << " - " << b << " = " << result << endl;
-	} if (choose == 3) {
+		resultOddEven = result;
+		cout << resultEnd << a << " - " << b << " = " << resultOddEven << endl;
+		
+//		=========== ODD EVEN VALIDATION USING IF ELSE CONDITION ===========
+//		if (resultOddEven % 2 == 1) {
+//			cout << "Hasil adalah Bilangan Ganjil" << endl;
+//		} else {
+//			cout << "Hasil adalah Bilangan Genap" << endl;
+//		}
+
+//		=========== ODD EVEN VALIDATION USING SWITCH CASE ===========
+//		resultOddEven = resultOddEven % 2;
+//		switch (resultOddEven) {
+//			case 1:
+//				cout << "Hasil adalah Bilangan Ganjil" << endl;
+//				break;
+//			default:
+//				cout << "Hasil adalah Bilangan Genap" << endl;
+//		}
+	} else if (choose == 3) {
 		cout << endl << "Perkalian:" << endl;
 		
 		cout << "Masukkan Angka 1:" << endl;
 		cin >> a;
-		
 		cout << "Masukkan Angka 2:" << endl;
 		cin >> b;
 		
 		result = a * b;
-		cout << resultEnd << a << " * " << b << " = " << result << endl;
-	} if (choose == 4) {
+		resultOddEven = result;
+		cout << resultEnd << a << " * " << b << " = " << resultOddEven << endl;
+		
+//		=========== ODD EVEN VALIDATION USING IF ELSE CONDITION ===========
+//		if (resultOddEven % 2 == 1) {
+//			cout << "Hasil adalah Bilangan Ganjil" << endl;
+//		} else {
+//			cout << "Hasil adalah Bilangan Genap" << endl;
+//		}
+
+//		=========== ODD EVEN VALIDATION USING SWITCH CASE ===========
+//		resultOddEven = resultOddEven % 2;
+//		switch (resultOddEven) {
+//			case 1:
+//				cout << "Hasil adalah Bilangan Ganjil" << endl;
+//				break;
+//			default:
+//				cout << "Hasil adalah Bilangan Genap" << endl;
+//		}
+	} else if (choose == 4) {
 		cout << endl << "Pembagian:" << endl;
 		
 		cout << "Masukkan Angka 1:" << endl;
 		cin >> a;
-		
 		cout << "Masukkan Angka 2:" << endl;
 		cin >> b;
 		
 		result = a / b;
-		cout << resultEnd << a << " / " << b << " = " << result << endl;
-	} if (choose == 5) {
+		resultOddEven = result;
+		cout << resultEnd << a << " / " << b << " = " << resultOddEven << endl;
+		
+//		=========== ODD EVEN VALIDATION USING IF ELSE CONDITION ===========
+//		if (resultOddEven % 2 == 1) {
+//			cout << "Hasil adalah Bilangan Ganjil" << endl;
+//		} else {
+//			cout << "Hasil adalah Bilangan Genap" << endl;
+//		}
+
+//		=========== ODD EVEN VALIDATION USING SWITCH CASE ===========
+//		resultOddEven = resultOddEven % 2;
+//		switch (resultOddEven) {
+//			case 1:
+//				cout << "Hasil adalah Bilangan Ganjil" << endl;
+//				break;
+//			default:
+//				cout << "Hasil adalah Bilangan Genap" << endl;
+//		}
+		
+	} else if (choose == 5) {
 		cout << endl << "Modulus:" << endl;
 		
 		cout << "Masukkan Angka 1:" << endl;
@@ -77,6 +146,7 @@ int main() {
 		
 		resultModulus = x % y;
 		cout << resultEnd << x << " % " << y << " = " << resultModulus << endl;
+		
 	} else {
 		cout << "Program Selesai" << endl;
 	}
