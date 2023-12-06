@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="SAQ 29"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-19 11:51:17 AM"/>
+        <attribute name="created" value="U0FRIDI5O1NBUS0yOTsyMDIzLTEwLTE5OzEwOjExOjAzIEFNOzIwMDI="/>
+        <attribute name="edited" value="U0FRIDI5O1NBUS0yOTsyMDIzLTEwLTE5OzExOjUxOjE3IEFNOzE7MjEyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <declare name="y" type="Integer" array="False" size=""/>
+            <declare name="z" type="Integer" array="False" size=""/>
+            <declare name="p" type="Integer" array="False" size=""/>
+            <declare name="q" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <input variable="y"/>
+            <assign variable="p" expression="x + y"/>
+            <if expression="p &gt;= 0">
+                <then>
+                    <assign variable="q" expression="x * y"/>
+                    <output expression="q" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

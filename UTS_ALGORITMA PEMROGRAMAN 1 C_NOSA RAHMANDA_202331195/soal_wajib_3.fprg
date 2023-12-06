@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="SAQ 29"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-16 11:06:22 AM"/>
+        <attribute name="created" value="U0FRIDI5O1NBUS0yOTsyMDIzLTExLTE2OzEwOjE4OjE5IEFNOzIwMTQ="/>
+        <attribute name="edited" value="U0FRIDI5O1NBUS0yOTsyMDIzLTExLTE2OzExOjA2OjIyIEFNOzE7MjExNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="noted" type="String" array="False" size=""/>
+            <declare name="nim" type="Integer" array="False" size=""/>
+            <declare name="absen" type="Real" array="False" size=""/>
+            <declare name="daily" type="Real" array="False" size=""/>
+            <declare name="mid" type="Real" array="False" size=""/>
+            <declare name="last" type="Real" array="False" size=""/>
+            <declare name="result" type="Real" array="False" size=""/>
+            <input variable="name"/>
+            <input variable="nim"/>
+            <input variable="absen"/>
+            <input variable="daily"/>
+            <input variable="mid"/>
+            <input variable="last"/>
+            <assign variable="absen" expression="absen * 10/100"/>
+            <assign variable="daily" expression="daily * 30/100"/>
+            <assign variable="mid" expression="mid * 30/100"/>
+            <assign variable="last" expression="last * 30/100"/>
+            <assign variable="result" expression="absen + daily + mid + last"/>
+            <if expression="result &gt;= 78 &amp;&amp; result &lt;= 100">
+                <then>
+                    <assign variable="noted" expression="&quot;Anda Mendapatkan A&quot;"/>
+                </then>
+                <else>
+                    <if expression="result &gt;= 70 &amp;&amp; result &lt;= 77">
+                        <then>
+                            <assign variable="noted" expression="&quot;Anda Mendapatkan B&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="result &gt;= 65 &amp;&amp; result &lt;= 69">
+                                <then>
+                                    <assign variable="noted" expression="&quot;Anda Mendapatkan C&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="result &gt;= 59 &amp;&amp; result &lt;= 64">
+                                        <then>
+                                            <assign variable="noted" expression="&quot;Anda Mendapatkan D&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="result &gt;= 50 &amp;&amp; result &lt;= 58">
+                                                <then>
+                                                    <assign variable="noted" expression="&quot;Anda Mendapatkan E&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="noted" expression="&quot;Anda Mendapatkan F&quot;"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="name" newline="True"/>
+            <output expression="nim" newline="True"/>
+            <output expression="result" newline="True"/>
+            <output expression="noted" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
