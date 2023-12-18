@@ -19,6 +19,64 @@ struct Pesanan {
 	int porsi;
 };
 
+void printMenuTanpaPoin() {
+	Menu menu[] {
+	  {"Ayam Goreng", "Makanan", 15000, 50},
+	  {"Ayam Gulai", "Makanan", 17000, 50},
+	  {"Ayam Bakar", "Makanan", 15000, 50},
+	  {"Es Teh", "Minuman", 10000, 20},
+	  {"Es Cincau", "Minuman", 10000, 20},
+	  {"Es Campur", "Minuman", 10000, 20},
+	  {"Kentang Goreng", "Snack", 15000, 20},
+	  {"Kerupuk", "Snack", 15000, 20},
+	  {"Kemplang", "Snack", 15000, 20},
+	};
+	
+	string daftar;
+	
+	for (int i = 1; i < 2; ++i) {
+		for (int j = 1; j < 2; ++j) {
+			for (int k = 1; k < 4; ++k) {
+      	switch (k) {
+      		case 1 :
+      			daftar = "=======Daftar Makanan======";
+      			cout << daftar << endl;
+      			cout << "Menu|Harga|Poin" << endl;
+      			for (int l = 0; l < sizeof(menu) / sizeof(menu[0]); l++) {
+					int temp = l + 1;
+					if (menu[l].kategori == "Makanan") {
+						cout << temp << ". " << menu[l].nama << "|" << menu[l].harga << "|"  << endl;
+					}
+				}
+				break;
+			case 2 :
+      			daftar = "=======Daftar Minuman======";
+      			cout << daftar << endl;
+      			cout << "Menu|Harga|Poin" << endl;
+      			for (int l = 0; l < sizeof(menu) / sizeof(menu[0]); l++) {
+					int temp = l + 1;
+					if (menu[l].kategori == "Minuman") {
+						cout << temp << ". " << menu[l].nama << "|" << menu[l].harga << "|"  << endl;
+					}
+				}
+				break;
+			default :
+      			daftar = "=======Daftar Snack======";
+      			cout << daftar << endl;
+      			cout << "Menu|Harga|Poin" << endl;
+      			for (int l = 0; l < sizeof(menu) / sizeof(menu[0]); l++) {
+					int temp = l + 1;
+					if (menu[l].kategori == "Snack") {
+						cout << temp << ". " << menu[l].nama << "|" << menu[l].harga << "|"  << endl;
+					}
+				}
+				break;
+				}
+    		}
+  		}
+	}
+}
+
 void printMenu() {
 	Menu menu[] {
 	  {"Ayam Goreng", "Makanan", 15000, 50},
@@ -29,7 +87,7 @@ void printMenu() {
 	  {"Es Campur", "Minuman", 10000, 20},
 	  {"Kentang Goreng", "Snack", 15000, 20},
 	  {"Kerupuk", "Snack", 15000, 20},
-	  {"Kemplang", "Snack", 15000, 20}
+	  {"Kemplang", "Snack", 15000, 20},
 	};
 	
 	string daftar;
@@ -186,6 +244,7 @@ void tukarPoin() {
 }
 
 int main() {
+	int totalPoin;
 	int pilih;
 	char lanjutkan;
 	string nama;
@@ -197,9 +256,8 @@ int main() {
 	do {
 		cout << "Aplikasi Restaurant dengan Membership" << endl;
 		cout << "1. Pesan Makanan" << endl;
-		cout << "2. Lihat Promo" << endl;
-		cout << "3. Cek Poin" << endl;
-		cout << "4. Tukar Poin" << endl;
+		cout << "2. Cek Poin" << endl;
+		cout << "3. Tukar Poin" << endl;
 		cout << "============" << endl;
 		
 		cout << "Pilih Layanan : ";
@@ -207,7 +265,7 @@ int main() {
 		switch (pilih) {
 			case 1 :
 				system("cls");
-				printMenu();
+				printMenuTanpaPoin();
 				pesanMakanan();
 				cout << "Apakah Anda ingin kembali? (y/t) ";
 				cin >> lanjutkan;
@@ -217,20 +275,13 @@ int main() {
 				break;
 			case 2 :
 				system("cls");
-				printMenu();
-				cout << "Apakah Anda ingin kembali? (y/t) ";
-				cin >> lanjutkan;
-				system("cls");
-				break;
-			case 3 :
-				system("cls");
 				cout << "Nama : " << nama << endl;
 				cout << "Total poin : " << totalPoin << endl;
 				cout << "Apakah Anda ingin kembali? (y/t) ";
 				cin >> lanjutkan;
 				system("cls");
 				break;
-			case 4 :
+			case 3 :
 				system("cls");
 				printMenu();
 				tukarPoin();
