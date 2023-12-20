@@ -220,11 +220,7 @@ void tukarPoin() {
 	cout << "=====================" << endl;
 	cout << "Poin anda sekarang: " << poin << endl;
 	cout << "Pilih menu untuk tukar poin : ";
-	if (claimPoin == pilih) {
-		cout << "Anda sudah mengambil menu ini :(" << endl;
-	}
 	cin >> pilih;
-	claimPoin = pilih;
 	
 	system("cls");
 	if (pilih > sizeof(menu) / sizeof(menu[0])) {
@@ -238,7 +234,7 @@ void tukarPoin() {
 			claimPoin -= poinMenu;
 			cout << "Selamat, poin berhasil digunakan" << endl;
 			cout << pesanan << endl;
-			cout << "Poin anda sekarang " << poin << endl;
+			cout << "Poin anda sekarang " << claimPoin << endl;
 		}
 	}
 }
@@ -276,7 +272,7 @@ int main() {
 			case 2 :
 				system("cls");
 				cout << "Nama : " << nama << endl;
-				cout << "Total poin : " << totalPoin << endl;
+				cout << "Total poin : " << claimPoin << endl;
 				cout << "Apakah Anda ingin kembali? (y/t) ";
 				cin >> lanjutkan;
 				system("cls");
